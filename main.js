@@ -1,5 +1,5 @@
 enchant();
-gsettings = {                  //ゲームウィンドウの幅，高さ，fpsを定義
+gs = {                  //ゲームウィンドウの幅，高さ，fpsを定義
     width:320
    ,height:320
    ,fps:15
@@ -7,7 +7,8 @@ gsettings = {                  //ゲームウィンドウの幅，高さ，fps�
 
 window.onload = function(){
 
-  game = new Core(gsettings.width,gsettings.height);
+  game = new Core(gs.width,gs.height);
+  game.fps=gs.fps;
   var stage = game.rootScene;
 
   game.onload = function(){
